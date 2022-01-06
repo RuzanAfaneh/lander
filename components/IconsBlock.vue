@@ -2,6 +2,7 @@
   <div class="icons__container">
     <h1 class="title">Lorem Ipsum</h1>
     <!-- TODO: FOR LOOP -->
+    <!-- <div><Light />Lorem ipsum dolor sit amet</div>
     <div><Light />Lorem ipsum dolor sit amet</div>
     <div><Light />Lorem ipsum dolor sit amet</div>
     <div><Light />Lorem ipsum dolor sit amet</div>
@@ -9,13 +10,12 @@
     <div><Light />Lorem ipsum dolor sit amet</div>
     <div><Light />Lorem ipsum dolor sit amet</div>
     <div><Light />Lorem ipsum dolor sit amet</div>
-    <div><Light />Lorem ipsum dolor sit amet</div>
-    <div><Light />Lorem ipsum dolor sit amet</div>
+    <div><Light />Lorem ipsum dolor sit amet</div> -->
   </div>
 </template>
 
 <script>
-import Light from '~/.nuxt/assets/light.svg'
+// import Light from '~@assets/light.svg'
 
 export default {
   name: 'IconsBlock',

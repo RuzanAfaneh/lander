@@ -19,7 +19,7 @@
           @mouseover="mouseOver(url, desc)"
           @mouseleave="hover = false"
         >
-          <Light />
+          <!-- <Light /> -->
           <span>{{ text }}</span>
         </div>
       </div>
@@ -29,12 +29,12 @@
 </template>
 
 <script>
-import Light from '~/.nuxt/assets/light.svg'
-
+// import Light from '../assets/light.svg'
+// 
 export default {
   name: 'SeventhBlock',
   components: {
-    Light,
+    // Light,
   },
   data() {
     return {
