@@ -5,7 +5,7 @@
     <SecBlock />
     <Block />
     <LearnMore />
-    <!-- <SeventhBlock /> -->
+    <SeventhBlock />
     <IconsBlock />
     <Footer />
   </div>
@@ -19,7 +19,7 @@ import HeroVideo from '../components/HeroVideo.vue'
 import IconsBlock from '../components/IconsBlock.vue'
 import LearnMore from '../components/LearnMore.vue'
 import SecBlock from '../components/SecBlock.vue'
-// import SeventhBlock from '../components/SeventhBlock.vue'
+import SeventhBlock from '../components/SeventhBlock.vue'
 import Vue from 'vue'
 
 export default Vue.extend({

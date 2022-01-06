@@ -20,7 +20,7 @@
 export default {
   name: 'IconsBlock',
   components: {
-    Light,
+    // Light,
   },
   data() {
     return {
