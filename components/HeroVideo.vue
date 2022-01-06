@@ -1,6 +1,6 @@
 <template>
   <video class="hero_video" autoplay muted loop nocontrols>
-    <source src="~/static/hero-video.mp4" type="video/mp4" />
+    <!-- <source src="~/static/hero-video.mp4" type="video/mp4" /> -->
   </video>
 </template>
 
