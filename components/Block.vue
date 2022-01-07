@@ -2,7 +2,7 @@
   <div class="third__container">
     <div
       class="third__blcok"
-      :class="hasScrolledToBottom ? 'fade' : ''"
+      :class="isScrolledTo ? 'fade' : ''"
       v-on:scroll.native="handleScroll"
     >
       <h1 class="third__block-title">
@@ -22,12 +22,12 @@ export default {
   name: 'Block',
   data() {
     return {
-      hasScrolledToBottom: false,
+      isScrolledTo: false,
     }
   },
   methods: {
     handleScroll: function (el) {
-      this.hasScrolledToBottom = true
+      this.isScrolledTo = true
     },
   },
   mounted() {

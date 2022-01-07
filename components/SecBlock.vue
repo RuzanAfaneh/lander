@@ -2,13 +2,13 @@
   <div class="sec__container">
     <div
       class="sec__block"
-      :class="hasScrolledToBottom ? 'fade' : ''"
+      :class="isScrolledTo ? 'fade' : ''"
       v-on:scroll.native="handleScroll"
     >
-      <h1 :class="hasScrolledToBottom ? 'fade' : ''">
+      <h1 :class="isScrolledTo ? 'fade' : ''">
         Lorem ipsum dolor sit amet
       </h1>
-      <div :class="hasScrolledToBottom ? 'fade' : ''" class="sec__block-quote">
+      <div :class="isScrolledTo ? 'fade' : ''" class="sec__block-quote">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec
         odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla
         quis sem at nibh elementum imperdiet. Duis sagittis ipsum.
@@ -22,12 +22,12 @@ export default {
   name: 'FirstBlock',
   data() {
     return {
-      hasScrolledToBottom: false,
+      isScrolledTo: false,
     }
   },
   methods: {
     handleScroll: function (el) {
-      this.hasScrolledToBottom = true
+      this.isScrolledTo = true
     },
   },
   mounted() {

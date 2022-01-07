@@ -4,7 +4,7 @@
       <h1 class="icons__title">Lorem Ipsum</h1>
       <div
         class="icons__item"
-        :class="hasScrolledToBottom ? 'fade-in' : ''"
+        :class="isScrolledTo ? 'fade-in' : ''"
         v-for="({ text }, i) in items"
         :key="i"
       >
@@ -62,12 +62,12 @@ export default {
           icon: '',
         },
       ],
-      hasScrolledToBottom: false,
+      isScrolledTo: false,
     }
   },
   methods: {
     handleScroll: function (el) {
-      this.hasScrolledToBottom = true
+      this.isScrolledTo = true
     },
   },
   mounted() {

@@ -25,7 +25,7 @@
 
 <script>
 export default {
-  name: 'ForthBlock',
+  name: 'LearnMore',
   data() {
     return {
       isScrolledTo: false,

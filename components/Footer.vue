@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  name: 'ForthBlock',
+  name: 'Footer',
   data() {
     return {
       items: [

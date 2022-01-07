@@ -2,10 +2,10 @@
   <div class="first__container">
     <div class="first__block" v-on:scroll.native="handleScroll">
       <img
-        :class="hasScrolledToBottom ? 'fade--left' : ''"
+        :class="isScrolledTo ? 'fade--left' : ''"
         src="https://picsum.photos/250/250"
       />
-      <div :class="hasScrolledToBottom ? 'fade--right' : ''">
+      <div :class="isScrolledTo ? 'fade--right' : ''">
         <h1>Lorem Ipsum</h1>
         <h2>Our Vision</h2>
         <p>
@@ -26,12 +26,12 @@ export default {
   name: 'FirstBlcok',
   data() {
     return {
-      hasScrolledToBottom: false,
+      isScrolledTo: false,
     }
   },
   methods: {
     handleScroll: function (el) {
-      this.hasScrolledToBottom = true
+      this.isScrolledTo = true
     },
   },
   mounted() {
