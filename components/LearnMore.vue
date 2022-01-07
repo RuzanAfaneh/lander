@@ -73,7 +73,6 @@ export default {
 .learn-more__container {
   background-color: black;
   position: relative;
-  display: none;
 
   .learn-more__title {
     display: block;
