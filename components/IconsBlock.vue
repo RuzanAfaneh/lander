@@ -95,7 +95,7 @@ export default {
   .icons__block {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
     margin: 0 auto;
     max-width: 1000px;
     padding: 30px;
@@ -113,6 +113,7 @@ export default {
     justify-content: space-evenly;
     position: relative;
     flex-basis: 26%;
+    font-family: 'Open Sans';
 
     @media only screen and (max-width: 768px) {
       flex-basis: auto;

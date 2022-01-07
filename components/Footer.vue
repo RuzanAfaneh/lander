@@ -89,6 +89,7 @@ export default {
     }
 
     a {
+      font-family: 'Open Sans';
       color: white;
       text-decoration: none;
     }

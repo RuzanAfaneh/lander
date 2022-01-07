@@ -78,7 +78,6 @@ export default {
 <style lang="scss" scoped>
 .seventh__container {
   align-items: center;
-  animation: 0.2s bg forwards;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -87,8 +86,7 @@ export default {
 
   .block__title {
     color: black;
-    font-size: 30px;
-    font-weight: 600;
+    font: 600 30px 'Open Sans';
     margin-bottom: 30px;
     top: 10%;
     text-align: center;
@@ -163,7 +161,7 @@ export default {
     font-size: 10px;
     height: 25px;
     padding: 20px;
-    opacity: .7;
+    opacity: 0.7;
     width: 25px;
   }
 

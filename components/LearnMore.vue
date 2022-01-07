@@ -73,6 +73,7 @@ export default {
 .learn-more__container {
   background-color: black;
   position: relative;
+  z-index: -2;
 
   @media only screen and (max-width: 768px) {
     background-color: white;
@@ -122,6 +123,7 @@ export default {
   transform: translatey(100%);
   transition: width 1s ease;
   width: 25vw;
+  z-index: -1;
 
   @media only screen and (max-width: 768px) {
     width: 100vw;

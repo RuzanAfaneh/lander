@@ -12,6 +12,7 @@
 </template>
 
 <script lang="ts">
+import Header from '../components/Header.vue'
 import Block from '../components/Block.vue'
 import FirstBlock from '../components/FirstBlock.vue'
 import Footer from '../components/Footer.vue'
@@ -25,6 +26,7 @@ import Vue from 'vue'
 export default Vue.extend({
   name: 'IndexPage',
   components: {
+    Header,
     HeroVideo,
     FirstBlock,
     SecBlock,
@@ -42,6 +44,8 @@ export default Vue.extend({
   // max-width: 1440px;
   width: 100%;
   overflow: hidden;
+  position: relative;
+  font-family: 'Open Sans';
 }
 
 img {
