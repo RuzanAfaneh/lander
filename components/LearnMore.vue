@@ -9,6 +9,7 @@
     <div class="lean-more__block">
       <div
         class="learn-more__item"
+        :class="isScrolledTo ? 'in-buttom' : ''"
         @mouseover="hover = true"
         @mouseleave="hover = false"
         :style="{ backgroundImage: `url(${thumbnail})` }"
@@ -27,7 +28,7 @@ export default {
   name: 'ForthBlock',
   data() {
     return {
-      hasScrolledToBottom: false,
+      isScrolledTo: false,
       hover: false,
 
       items: [
@@ -56,7 +57,7 @@ export default {
   },
   methods: {
     handleScroll: function (el) {
-      this.hasScrolledToBottom = true
+      this.isScrolledTo = true
     },
   },
   mounted() {
@@ -93,9 +94,12 @@ export default {
 
 .learn-more__item {
   background-repeat: no-repeat;
-  animation: mesh-expand 0.3s forwards;
   flex-grow: 0;
   height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   margin: 0 auto;
   max-height: 350px;
   overflow: hidden;
@@ -103,6 +107,7 @@ export default {
   text-align: center;
   transform-origin: bottom;
   transition: width 1s ease;
+  transform: translatey(100%);
   width: 25vw;
 
   div {
@@ -127,30 +132,10 @@ export default {
 }
 
 .learn-more__item:hover {
-  animation: expand 0.5s forwards;
+  width: 35vw;
 
   .learn-more__desc {
     display: block;
-  }
-}
-
-@keyframes expand {
-  0% {
-    width: 25vw;
-  }
-
-  100% {
-    width: 30vw;
-  }
-}
-
-@keyframes mesh-expand {
-  0% {
-    width: 30vw;
-  }
-
-  100% {
-    width: 25vw;
   }
 }
 
@@ -158,11 +143,32 @@ export default {
   0% {
     opacity: 0;
   }
-  // 30% {
-  //   opacity: 0.;
-  // }
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes in-buttom {
+  0% {
+    transform: translatey(100%);
+  }
+  100% {
+    transform: translatey(0);
+  }
+}
+
+.in-buttom {
+  animation: 3s in-buttom;
+}
+
+.learn-more__item:nth-child(1) {
+  animation: 0.5s in-buttom forwards;
+}
+
+@for $i from 2 through 4 {
+  .learn-more__item:nth-child(3n + #{$i}) {
+    animation: 0.5s in-buttom forwards;
+    animation-delay: $i - 1.5s;
   }
 }
 </style>

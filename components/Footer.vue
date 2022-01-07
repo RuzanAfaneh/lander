@@ -59,42 +59,42 @@ export default {
 <style lang="scss" scoped>
 .footer__container {
   width: 100%;
-  background: linear-gradient(-45deg, #b1a9a6, #d2d523);
+  background: linear-gradient(-45deg, #587bdb, #10063f);
   background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
-  border-top: 10px solid red;
+  animation: gradient 5s ease infinite;
+  border-top: 5px solid red;
 }
 
 .footer__block {
-  max-width: 1440px;
+  max-width: 1000px;
   width: 100%;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row-reverse;
+  padding: 20px;
+
+  .footer__item {
+    cursor: pointer;
+    flex-basis: 50%;
+    margin: 20px 0;
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
 }
 
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
   }
-  20% {
-    background-position: 40% 20%;
-  }
-  40% {
-    background-position: 20% 40%;
+  50% {
+    background-position: 100% 50%;
   }
   100% {
     background-position: 0% 50%;
-  }
-}
-
-.footer__item {
-  cursor: pointer;
-  flex-basis: 50%;
-  margin: 20px 0;
-  a {
-    text-decoration: none;
   }
 }
 </style>

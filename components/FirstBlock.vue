@@ -44,10 +44,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.first__container {
-
-}
-
 .first__block {
   display: flex;
   align-items: center;
@@ -55,13 +51,11 @@ export default {
   padding: 100px 70px;
   max-width: 1000px;
   margin: 0 auto;
+
   > div,
   > p {
     flex-basis: 50%;
   }
-}
-.fade {
-  background-color: red;
 }
 
 @keyframes in-left {
