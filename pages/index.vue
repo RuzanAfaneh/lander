@@ -5,8 +5,9 @@
     <SecBlock />
     <Block />
     <LearnMore />
-    <SeventhBlock />
     <IconsBlock />
+    <SeventhBlock />
+
     <Footer />
   </div>
 </template>
@@ -43,8 +44,7 @@ export default Vue.extend({
   width: 100%;
 }
 
-body
-{
+body {
   margin: 0;
 }
 </style>

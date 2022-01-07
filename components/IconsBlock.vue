@@ -1,16 +1,16 @@
 <template>
   <div class="icons__container">
-    <h1 class="title">Lorem Ipsum</h1>
-    <!-- TODO: FOR LOOP -->
-    <!-- <div><Light />Lorem ipsum dolor sit amet</div>
-    <div><Light />Lorem ipsum dolor sit amet</div>
-    <div><Light />Lorem ipsum dolor sit amet</div>
-    <div><Light />Lorem ipsum dolor sit amet</div>
-    <div><Light />Lorem ipsum dolor sit amet</div>
-    <div><Light />Lorem ipsum dolor sit amet</div>
-    <div><Light />Lorem ipsum dolor sit amet</div>
-    <div><Light />Lorem ipsum dolor sit amet</div>
-    <div><Light />Lorem ipsum dolor sit amet</div> -->
+    <div class="icons__block">
+      <h1 class="icons__title">Lorem Ipsum</h1>
+      <div
+        class="icons__item"
+        :class="hasScrolledToBottom ? 'fade-in' : ''"
+        v-for="({ text }, i) in items"
+        :key="i"
+      >
+        {{ text }}
+      </div>
+    </div>
   </div>
 </template>
 
@@ -24,6 +24,44 @@ export default {
   },
   data() {
     return {
+      items: [
+        {
+          text: 'Lorem ipsum dolor sit',
+          icon: '',
+        },
+        {
+          text: 'Lorem ipsum dolor sit',
+          icon: '',
+        },
+        {
+          text: 'Lorem ipsum dolor sit',
+          icon: '',
+        },
+        {
+          text: 'Lorem ipsum dolor sit',
+          icon: '',
+        },
+        {
+          text: 'Lorem ipsum dolor sit',
+          icon: '',
+        },
+        {
+          text: 'Lorem ipsum dolor sit',
+          icon: '',
+        },
+        {
+          text: 'Lorem ipsum dolor sit',
+          icon: '',
+        },
+        {
+          text: 'Lorem ipsum dolor sit',
+          icon: '',
+        },
+        {
+          text: 'Lorem ipsum dolor sit',
+          icon: '',
+        },
+      ],
       hasScrolledToBottom: false,
     }
   },
@@ -42,24 +80,34 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import url('https://use.fontawesome.com/releases/v5.13.0/css/all.css');
+
 .icons__container {
-  display: flex;
-  width: 100%;
-  flex-wrap: wrap;
-      justify-content: space-evenly;
+  background-color: #ebe0cc;
 
-
-  h1 {
+  .icons__title {
     flex-basis: 100%;
     align-items: center;
     justify-content: center;
     display: flex;
   }
 
-  div {
-    justify-content: space-evenly;
+  .icons__block {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    max-width: 1000px;
+    padding: 30px;
+    width: 100%;
+  }
+
+  div {
+    align-items: center;
+    color: black;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
 
     svg,
     path {
@@ -67,6 +115,42 @@ export default {
       height: 50px;
     }
     flex-basis: 26%;
+  }
+
+  .icons__item {
+    opacity: 0;
+    padding: 30px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+
+    &::before {
+      content: '\f35a'; /* You should use \ and not /*/
+      font-family: 'Font Awesome 5 Free'; /* This is the correct font-family*/
+      font-style: normal;
+      font-weight: normal;
+      font-size: 40px;
+      color: #009ba6;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+$couner: 0s;
+
+@for $i from 2 through 10 {
+  $couner: $couner + 0.4s;
+  .fade-in:nth-child(#{$i}) {
+    animation: 0.5s fade forwards;
+    animation-delay: $couner;
   }
 }
 </style>
