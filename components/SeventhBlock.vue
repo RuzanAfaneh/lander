@@ -109,11 +109,6 @@ export default {
 
     @media only screen and (max-width: 768px) {
       position: relative;
-      flex-wrap: wrap;
-    }
-
-    > div {
-      flex-basis: 100%;
     }
   }
 
@@ -163,9 +158,22 @@ export default {
   text-align: center;
   width: 100px;
 
+  @media only screen and (max-width: 768px) {
+    animation: none;
+    font-size: 10px;
+    height: 25px;
+    padding: 20px;
+    opacity: .7;
+    width: 25px;
+  }
+
   &:hover {
     animation: 0.7s in forwards;
     background-color: white;
+
+    @media only screen and (max-width: 768px) {
+      animation: none;
+    }
 
     g,
     svg,

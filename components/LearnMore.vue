@@ -74,6 +74,10 @@ export default {
   background-color: black;
   position: relative;
 
+  @media only screen and (max-width: 768px) {
+    background-color: white;
+  }
+
   .learn-more__title {
     display: block;
     position: absolute;
@@ -82,33 +86,51 @@ export default {
     width: 100%;
     z-index: 1;
     animation: fade-in 3s ease;
+
     &--hover {
+      display: none;
+    }
+
+    @media only screen and (max-width: 768px) {
       display: none;
     }
   }
 
   .lean-more__block {
     display: flex;
+
+    @media only screen and (max-width: 768px) {
+      flex-wrap: wrap;
+    }
   }
 }
 
 .learn-more__item {
+  align-items: center;
+  background-color: white;
   background-repeat: no-repeat;
-  flex-grow: 0;
-  height: 250px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-
+  flex-grow: 0;
+  height: 250px;
   margin: 0 auto;
   max-height: 350px;
   overflow: hidden;
   position: relative;
   text-align: center;
   transform-origin: bottom;
-  transition: width 1s ease;
   transform: translatey(100%);
+  transition: width 1s ease;
   width: 25vw;
+
+  @media only screen and (max-width: 768px) {
+    width: 100vw;
+    margin: 30px 0 0;
+
+    &:last-child {
+      margin-bottom: 30px;
+    }
+  }
 
   div {
     margin: 0 20px;
@@ -128,11 +150,20 @@ export default {
   .learn-more__desc {
     display: none;
     width: calc(30vw - 50px);
+
+    @media only screen and (max-width: 768px) {
+      display: block;
+      width: calc(100vw - 50px);
+    }
   }
 }
 
 .learn-more__item:hover {
   width: 35vw;
+
+  @media only screen and (max-width: 768px) {
+    width: 100vw;
+  }
 
   .learn-more__desc {
     display: block;

@@ -99,10 +99,10 @@ export default {
     margin: 0 auto;
     max-width: 1000px;
     padding: 30px;
-    width: 100%;
 
     @media only screen and (max-width: 768px) {
-    padding: 20px;
+      padding: 20px;
+      justify-content: flex-start;
     }
   }
 
@@ -115,7 +115,8 @@ export default {
     flex-basis: 26%;
 
     @media only screen and (max-width: 768px) {
-      flex-basis: 100%;
+      flex-basis: auto;
+      flex-wrap: wrap;
     }
 
     svg,

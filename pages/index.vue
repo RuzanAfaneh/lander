@@ -44,4 +44,9 @@ export default Vue.extend({
   overflow: hidden;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
 </style>
