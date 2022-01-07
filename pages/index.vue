@@ -6,35 +6,35 @@
     <Block />
     <LearnMore />
     <IconsBlock />
-    <SeventhBlock />
+    <BubblesBlock />
     <Footer />
   </div>
 </template>
 
 <script lang="ts">
-import Header from '../components/Header.vue'
-import Block from '../components/Block.vue'
+import BubblesBlock from '../components/BubblesBlock.vue'
 import FirstBlock from '../components/FirstBlock.vue'
 import Footer from '../components/Footer.vue'
+import Header from '../components/Header.vue'
 import HeroVideo from '../components/HeroVideo.vue'
 import IconsBlock from '../components/IconsBlock.vue'
 import LearnMore from '../components/LearnMore.vue'
+import Block from '../components/Block.vue'
 import SecBlock from '../components/SecBlock.vue'
-import SeventhBlock from '../components/SeventhBlock.vue'
 import Vue from 'vue'
 
 export default Vue.extend({
   name: 'IndexPage',
   components: {
+    Block,
+    BubblesBlock,
+    FirstBlock,
+    Footer,
     Header,
     HeroVideo,
-    FirstBlock,
-    SecBlock,
-    Block,
     IconsBlock,
-    Footer,
     LearnMore,
-    SeventhBlock,
+    SecBlock,
   },
 })
 </script>

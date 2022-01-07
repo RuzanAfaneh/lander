@@ -32,7 +32,7 @@
 // import Light from '../assets/light.svg'
 //
 export default {
-  name: 'SeventhBlock',
+  name: 'BubblesBlock',
   components: {
     // Light,
   },
