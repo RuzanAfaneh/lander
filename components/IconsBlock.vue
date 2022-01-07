@@ -100,6 +100,10 @@ export default {
     max-width: 1000px;
     padding: 30px;
     width: 100%;
+
+    @media only screen and (max-width: 768px) {
+    padding: 20px;
+    }
   }
 
   div {
@@ -108,13 +112,17 @@ export default {
     display: flex;
     justify-content: space-evenly;
     position: relative;
+    flex-basis: 26%;
+
+    @media only screen and (max-width: 768px) {
+      flex-basis: 100%;
+    }
 
     svg,
     path {
       width: 50px;
       height: 50px;
     }
-    flex-basis: 26%;
   }
 
   .icons__item {
@@ -124,8 +132,8 @@ export default {
     align-items: flex-start;
 
     &::before {
-      content: '\f35a'; /* You should use \ and not /*/
-      font-family: 'Font Awesome 5 Free'; /* This is the correct font-family*/
+      content: '\f35a';
+      font-family: 'Font Awesome 5 Free';
       font-style: normal;
       font-weight: normal;
       font-size: 40px;

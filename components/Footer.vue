@@ -1,9 +1,9 @@
 <template>
   <div class="footer__container">
     <div class="footer__block">
-      <div class="footer__item" v-for="({ url, title }, i) in items" :key="i">
+      <span class="footer__item" v-for="({ url, title }, i) in items" :key="i">
         <a :href="url">{{ title }}</a>
-      </div>
+      </span>
     </div>
   </div>
 </template>
@@ -58,26 +58,35 @@ export default {
 
 <style lang="scss" scoped>
 .footer__container {
-  width: 100%;
-  background: linear-gradient(-45deg, #587bdb, #10063f);
-  background-size: 400% 400%;
   animation: gradient 5s ease infinite;
+  background-size: 400% 400%;
+  background: linear-gradient(-45deg, #587bdb, #10063f);
   border-top: 5px solid red;
+  width: 100%;
 }
 
 .footer__block {
-  max-width: 1000px;
-  width: 100%;
-  margin: 0 auto;
   display: flex;
-  flex-wrap: wrap;
   flex-direction: row-reverse;
-  padding: 20px;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 20px 70px;
+
+  @media only screen and (max-width: 768px) {
+    padding: 20px 10px;
+  }
 
   .footer__item {
     cursor: pointer;
     flex-basis: 50%;
     margin: 20px 0;
+
+    @media only screen and (max-width: 768px) {
+      flex-basis: 100%;
+      display: flex;
+      justify-content: center;
+    }
 
     a {
       color: white;

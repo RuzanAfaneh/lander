@@ -14,18 +14,18 @@ export default {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
   router: {
-    base: '/'
+    base: '/',
   },
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
+  css: ['normalize.css/normalize.css'],
   svg: {
     vueSvgLoader: {
-        // vue-svg-loader options
+      // vue-svg-loader options
     },
     svgSpriteLoader: {
-        // svg-sprite-loader options
-    }
-},
+      // svg-sprite-loader options
+    },
+  },
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
 
@@ -38,13 +38,11 @@ export default {
     '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/stylelint
     '@nuxtjs/stylelint-module',
-    "@nuxtjs/svg",
+    '@nuxtjs/svg',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [
-    'nuxt-svg-loader',
-  ],
+  modules: ['nuxt-svg-loader'],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {

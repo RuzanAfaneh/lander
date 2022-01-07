@@ -7,7 +7,6 @@
     <LearnMore />
     <IconsBlock />
     <SeventhBlock />
-
     <Footer />
   </div>
 </template>
@@ -33,7 +32,7 @@ export default Vue.extend({
     IconsBlock,
     Footer,
     LearnMore,
-    // SeventhBlock,
+    SeventhBlock,
   },
 })
 </script>
@@ -42,9 +41,7 @@ export default Vue.extend({
 .container {
   // max-width: 1440px;
   width: 100%;
+  overflow: hidden;
 }
 
-body {
-  margin: 0;
-}
 </style>

@@ -30,7 +30,7 @@
 
 <script>
 // import Light from '../assets/light.svg'
-// 
+//
 export default {
   name: 'SeventhBlock',
   components: {
@@ -91,6 +91,7 @@ export default {
     font-weight: 600;
     margin-bottom: 30px;
     top: 10%;
+    text-align: center;
 
     &--hover {
       color: white;
@@ -105,6 +106,15 @@ export default {
     position: absolute;
     top: 30%;
     width: 100%;
+
+    @media only screen and (max-width: 768px) {
+      position: relative;
+      flex-wrap: wrap;
+    }
+
+    > div {
+      flex-basis: 100%;
+    }
   }
 
   .item__desc {
@@ -148,6 +158,7 @@ export default {
   flex-direction: column;
   height: 100px;
   justify-content: space-evenly;
+  margin: 10px auto;
   padding: 30px;
   text-align: center;
   width: 100px;
